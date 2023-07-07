@@ -7,19 +7,15 @@ Developed for Minecraft Forge 1.12.2.
 
 ## Usage
 
-The mod doesn't do anything until you edit the configuration file `dimresetcfg.txt` which can be found in the world folder.
+The mod doesn't do anything until you add dimension names to the configuration file `auto_dim_reset.txt` which can be found in the config folder.
 
-The configration file formatting is as follows.
+The default reset interval is a month, but can be configured in `auto_dim_reset_time.txt`.
 
-```
-n?e?[0-9]+y[0-9]+m[0-9]+d[0-9]+h
-```
+Example of format: `0y3m0d0h`
 
-For example:
+Which would correspond to resetting every 3 months.
 
-`ne2023y1m2d0h` will reset the both the nether and end dimensions when the server starts on or after January 2nd 2023 at the 0th hour UTC.
-
-The configuration file will be updated with the current date plus a month when a dimension reset is triggered.
+The file `last_dim_reset.txt` in the world folder will be updated with the current date when a dimension reset is triggered.
 
 ## Important
 
